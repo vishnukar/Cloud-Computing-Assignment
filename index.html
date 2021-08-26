@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI vs RR</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <h1 style="text-align: center;">MI VS RR</h1>
+        <canvas id="score" height="100%"></canvas>
+    </div>
+
+    <script>
+            const labels = [
+       
+        '5 Overs',
+        '10 Overs',
+        '15 Overs',
+        '20 Overs'
+      ];
+const data = {
+  labels: labels,
+  datasets: [{
+    label: 'MI',
+    data: [40,70,140,190],
+       borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+
+
+const config = {
+  type: 'line',
+  data: data,
+  options: {},
+};
+
+        
+        var myChart = new Chart(document.getElementById('score'),config);
+        
+    
+
+    </script>
+
+
+</body>
+</html>
